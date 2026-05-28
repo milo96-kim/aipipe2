@@ -40,7 +40,7 @@ nextjs-boilerplate/
 ├── components/
 │   └── ui/                       # shadcn 컴포넌트
 ├── lib/
-│   ├── auth.ts                   # NextAuth 설정 (authOptions)
+│   ├── auth.ts                   # NextAuth 설정 (handlers, auth, signIn, signOut export)
 │   └── db.ts                     # Prisma 클라이언트 싱글턴
 ├── prisma/
 │   ├── schema.prisma
@@ -138,8 +138,10 @@ middleware.ts
 NEXTAUTH_SECRET=
 GOOGLE_CLIENT_ID=
 GOOGLE_CLIENT_SECRET=
-DATABASE_URL=        # Neon connection string
+DATABASE_URL=        # Neon connection string (dev branch for local, main branch for production)
 ```
+
+> **개발 환경 DB:** CLAUDE.md 기본값(SQLite)을 덮어쓰고 Neon을 사용합니다. Neon의 브랜치 기능으로 개발(`dev`)과 프로덕션(`main`)을 분리합니다.
 
 ## Pages
 
